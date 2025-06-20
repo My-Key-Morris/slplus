@@ -27,7 +27,7 @@ function addUpdateTeamsList(pair, teamsList){
         //console.log("Can Team " + currTeam.key + " add pair " + pair.key + "?" + " Team: " + teamsList[index].key + " " + currLength + " vs. " + teamsList[index].pairs.length);
         if(currTeam.canAdd(pair)){
           //console.log("Can add!");
-          t3 = new Team([...currTeam.pairs], false);
+          const t3 = new Team([...currTeam.pairs], false);
           t2.addParent(currTeam);
           cloneArr.push(t3);
           currTeam.addPair(pair);
